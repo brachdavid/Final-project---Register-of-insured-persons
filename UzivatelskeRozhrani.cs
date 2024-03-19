@@ -101,7 +101,7 @@ namespace EvidencePojistenych
         /// <returns></returns>
         private string VratZvalidovanyText(string uzivatelskyVstup)
         {
-            while (string.IsNullOrWhiteSpace(uzivatelskyVstup = Console.ReadLine()?.Trim() ?? "") || !PrvniPismenoVelke(uzivatelskyVstup) || ObsahujeCisliceNeboSpecialniZnaky(uzivatelskyVstup))
+            while (string.IsNullOrWhiteSpace(uzivatelskyVstup = Console.ReadLine()?.Trim() ?? "") || !JePrvniPismenoVelke(uzivatelskyVstup) || ObsahujeCisliceNeboSpecialniZnaky(uzivatelskyVstup))
             {
                 Console.WriteLine("Ajajaj, někde se stala chyba! Hodnota (pokud byla zadána) musí začínat velkým písmenem, zároveň nesmí obsahovat číslice ani speciální znaky.");
             }
@@ -113,7 +113,7 @@ namespace EvidencePojistenych
         /// </summary>
         /// <param name="uzivatelskyVstup">Hodnota zadaná uživatelem</param>
         /// <returns></returns>
-        private bool PrvniPismenoVelke(string uzivatelskyVstup)
+        private bool JePrvniPismenoVelke(string uzivatelskyVstup)
         {
             // Kontrola, zda je první znak velkým písmenem
             return char.IsUpper(uzivatelskyVstup[0]);
